@@ -55,8 +55,12 @@ export async function GET(request: Request) {
       },
     );
 
+    // In some production flows the auth session is not yet fully usable for RLS
+    // right after verifyOtp. We don't want profile creation to block email
+    // confirmation, because loginAction will ensure the profile again once the
+    // session is established.
     if (profileError) {
-      return NextResponse.redirect(`${origin}/login?message=${encodeURIComponent(profileError.message)}`);
+      console.warn("Profile bootstrap after email confirmation failed:", profileError.message);
     }
   }
 
