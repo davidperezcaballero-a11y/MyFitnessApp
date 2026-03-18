@@ -25,7 +25,7 @@ export function SessionOverview({ session }: SessionOverviewProps) {
             {session.title}
           </h2>
           <p className="mt-2 text-sm text-ink/65">
-            Sesion mock pensada para validar el flujo guiado antes de integrar backend.
+            Sesion preparada desde el plan actual para arrancar el flujo guiado de entrenamiento.
           </p>
         </div>
         <span className="rounded-full bg-moss px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">

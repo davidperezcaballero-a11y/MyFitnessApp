@@ -1,20 +1,15 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 
 import { FeatureCard } from "@/components/ui/feature-card";
 import { PageHeader } from "@/components/ui/page-header";
-import { getHistorySessionById } from "@/features/history/data/mock-history";
+import { getHistorySessionById } from "@/features/history/queries";
 
 type HistoryDetailPageProps = {
   sessionId: string;
 };
 
-export function HistoryDetailPage({ sessionId }: HistoryDetailPageProps) {
-  const session = getHistorySessionById(sessionId);
-
-  if (!session) {
-    notFound();
-  }
+export async function HistoryDetailPage({ sessionId }: HistoryDetailPageProps) {
+  const session = await getHistorySessionById(sessionId);
 
   return (
     <div className="space-y-5">

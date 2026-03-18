@@ -1,0 +1,8 @@
+session_date,session_type,session_name,item_name,exercise_order,set_number,reps,weight,rpe,duration_minutes,distance_km,avg_heart_rate,notes
+2026-03-10,strength,Fuerza A,Press banca,1,1,6,70,8,,,,Bloque empuje
+2026-03-10,strength,Fuerza A,Press banca,1,2,6,70,8.5,,,,Bloque empuje
+2026-03-10,strength,Fuerza A,Remo con barra,2,1,8,55,8,,,,Bloque empuje
+2026-03-11,cardio,Running base,Correr,,,,,,45,8.1,145,Rodaje suave
+2026-03-13,cardio,Recuperacion activa,Caminar,,,,,,30,2.0,118,Paseo rapido
+2026-03-12,mobility,Movilidad cadera,Hip airplane,1,,,,,10,,,Trabajo de cadera
+2026-03-12,mobility,Core y cadera,Dead bug,2,,,,,8,,,Trabajo de control lumbopelvico

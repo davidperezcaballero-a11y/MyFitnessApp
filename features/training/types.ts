@@ -1,5 +1,3 @@
-import type { Route } from "next";
-
 export type StrengthSet = {
   setNumber: number;
   reps: number;
@@ -13,6 +11,7 @@ export type PlannedStrengthExercise = {
   targetSets: number;
   targetReps: number;
   targetWeight?: number;
+  sessionExerciseId?: string;
   completedSets: StrengthSet[];
 };
 
@@ -20,6 +19,8 @@ export type WorkoutSessionStatus = "idle" | "started" | "exercise_active" | "ses
 
 export type WorkoutSessionDraft = {
   id: string;
+  plannedSessionId?: string;
+  workoutSessionId?: string;
   title: string;
   source: "planned" | "free";
   status: WorkoutSessionStatus;
@@ -28,7 +29,7 @@ export type WorkoutSessionDraft = {
 };
 
 export type TrainingModeCard = {
-  href: Route;
+  href: string;
   title: string;
   description: string;
   status: string;
@@ -45,6 +46,7 @@ export type CardioWorkoutDraft = {
 };
 
 export type MobilityWorkoutDraft = {
+  plannedSessionId?: string;
   title: string;
   routineName: string;
   totalMinutes: number;
@@ -52,6 +54,17 @@ export type MobilityWorkoutDraft = {
     name: string;
     durationSeconds: number;
   }>;
+};
+
+export type PlannedCardioSessionDraft = {
+  plannedSessionId: string;
+  title: string;
+  activityId?: string;
+  activityName: string;
+  durationMinutes?: number;
+  distanceKm?: number;
+  notes?: string;
+  dateLabel: string;
 };
 
 export type FreeWorkoutDraft = {

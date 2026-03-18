@@ -9,7 +9,7 @@ type AppShellProps = {
 
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 pb-28 pt-5 sm:max-w-5xl sm:px-6 lg:px-8">
+    <div className="mx-auto flex min-h-screen w-full max-w-[1680px] flex-col px-4 pb-28 pt-5 sm:px-6 xl:px-8">
       <AppTopBar />
       <main className="flex-1">{children}</main>
       <BottomNav />

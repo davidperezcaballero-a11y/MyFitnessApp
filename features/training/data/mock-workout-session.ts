@@ -45,32 +45,11 @@ export const mockWorkoutSession: WorkoutSessionDraft = {
 
 export const trainingModeCards: TrainingModeCard[] = [
   {
-    href: "/entrenar/sesion",
-    title: "Sesion guiada",
-    description: "Modo principal para fuerza con autocompletado de series y avance ejercicio a ejercicio.",
-    status: "Activo",
-    accent: "teal",
-  },
-  {
     href: "/entrenar/libre",
     title: "Entrenamiento libre",
-    description: "Sesion flexible para dias sin plan fijo, con ejercicios anadidos manualmente.",
-    status: "Mock listo",
+    description: "Sesion flexible para dias sin plan fijo, con ejercicios anadidos manualmente y sin depender del bloque actual.",
+    status: "Secundario",
     accent: "coral",
-  },
-  {
-    href: "/entrenar/cardio",
-    title: "Cardio",
-    description: "Registro rapido de actividad, duracion, distancia y foco por zonas.",
-    status: "Mock listo",
-    accent: "moss",
-  },
-  {
-    href: "/entrenar/movilidad",
-    title: "Movilidad",
-    description: "Rutinas repetibles de movilidad con tiempos sugeridos por ejercicio.",
-    status: "Mock listo",
-    accent: "teal",
   },
 ];
 

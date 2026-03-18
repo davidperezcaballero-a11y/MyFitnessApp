@@ -1,4 +1,5 @@
 export type PlannedExerciseItem = {
+  exerciseId?: string;
   name: string;
   prescription: string;
 };
@@ -17,9 +18,20 @@ export type TrainingPlanWeek = {
 };
 
 export type TrainingPlanDraft = {
+  id: string;
   name: string;
   startDate: string;
+  status: "active" | "inactive" | "finished";
   objective: string;
   weeklyTarget: string;
   weeks: TrainingPlanWeek[];
+};
+
+export type TrainingPlanOverviewItem = {
+  id: string;
+  name: string;
+  startDate: string;
+  status: "active" | "inactive" | "finished";
+  objective: string;
+  totalWeeks: number;
 };

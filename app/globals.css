@@ -39,3 +39,22 @@ select,
 textarea {
   font: inherit;
 }
+
+.plan-matrix-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #b6aa96 #f4efe7;
+}
+
+.plan-matrix-scroll::-webkit-scrollbar {
+  height: 12px;
+}
+
+.plan-matrix-scroll::-webkit-scrollbar-track {
+  background: #f4efe7;
+}
+
+.plan-matrix-scroll::-webkit-scrollbar-thumb {
+  background: #b6aa96;
+  border-radius: 999px;
+  border: 2px solid #f4efe7;
+}

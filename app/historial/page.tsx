@@ -1,5 +1,13 @@
 import { HistoryPage } from "@/features/history/components/history-page";
 
-export default function HistorialPage() {
-  return <HistoryPage />;
+type HistorialPageProps = {
+  searchParams?: Promise<{
+    message?: string;
+  }>;
+};
+
+export default async function HistorialPage({ searchParams }: HistorialPageProps) {
+  const params = searchParams ? await searchParams : undefined;
+
+  return <HistoryPage message={params?.message} />;
 }

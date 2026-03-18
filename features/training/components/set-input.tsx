@@ -6,6 +6,7 @@ type SetInputProps = {
   nextSetNumber: number;
   suggestedWeight: number;
   suggestedReps: number;
+  disabled?: boolean;
   onSubmit: (input: { weight: number; reps: number; rpe?: number }) => void;
 };
 
@@ -13,6 +14,7 @@ export function SetInput({
   nextSetNumber,
   suggestedWeight,
   suggestedReps,
+  disabled = false,
   onSubmit,
 }: SetInputProps) {
   const [weight, setWeight] = useState(String(suggestedWeight));
@@ -55,6 +57,7 @@ export function SetInput({
               min="0"
               step="0.5"
               type="number"
+              disabled={disabled}
               value={weight}
               onChange={(event) => setWeight(event.target.value)}
               className="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 text-ink outline-none transition focus:border-teal"
@@ -68,6 +71,7 @@ export function SetInput({
               min="0"
               step="1"
               type="number"
+              disabled={disabled}
               value={reps}
               onChange={(event) => setReps(event.target.value)}
               className="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 text-ink outline-none transition focus:border-teal"
@@ -81,6 +85,7 @@ export function SetInput({
               max="10"
               step="0.5"
               type="number"
+              disabled={disabled}
               value={rpe}
               onChange={(event) => setRpe(event.target.value)}
               className="w-full rounded-2xl border border-ink/10 bg-sand px-4 py-3 text-ink outline-none transition focus:border-teal"
@@ -90,9 +95,10 @@ export function SetInput({
 
         <button
           type="submit"
+          disabled={disabled}
           className="w-full rounded-full bg-coral px-4 py-3 text-sm font-semibold text-white transition hover:bg-ink"
         >
-          Guardar serie {nextSetNumber}
+          {disabled ? "Guardando..." : `Guardar serie ${nextSetNumber}`}
         </button>
       </form>
     </section>
